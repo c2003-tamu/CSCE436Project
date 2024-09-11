@@ -1,1 +1,1 @@
-# CSCE436Project
+# CSCE 436 Project
