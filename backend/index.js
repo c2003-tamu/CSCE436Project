@@ -7,7 +7,7 @@ app.use(express.json());
 
 // Import and use routes
 const exampleRoutes = require('./routes/exampleRoutes');
-app.use('/api/example', exampleRoutes);
+app.use('/', exampleRoutes);
 
 // Start the server
 app.listen(port, () => {
