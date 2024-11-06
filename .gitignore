@@ -1,2 +1,4 @@
 Laptop.pem
 .env
+backend/.env
+backend/node_modules
