@@ -1,14 +1,17 @@
+// routes/exampleRoutes.js
 const express = require('express');
 const router = express.Router();
+const db = require('../config/db');
 
-// GET route
-router.get('/', (req, res) => {
-  res.send('Hello from GET route');
-});
-
-// POST route
-router.post('/', (req, res) => {
-  res.send('Hello from POST route');
+// Example route to get data from MySQL
+router.get('/User', async (req, res) => {
+  try {
+    const [rows] = await db.execute('SELECT * FROM User');
+    res.json(rows);  // Send back the query results as JSON
+  } catch (error) {
+    console.error('Database error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 });
 
 module.exports = router;
