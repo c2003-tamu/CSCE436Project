@@ -9,8 +9,12 @@ CREATE TABLE User (
 
 CREATE TABLE Room (
     id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
     floor INT NOT NULL,
-    number INT NOT NULL
+    number INT NOT NULL,
+    seats INT NOT NULL,
+    table_type VARCHAR(255) NOT NULL,
+    has_tv TINYINT(1) NOT NULL
 );
 
 CREATE TABLE Event (
