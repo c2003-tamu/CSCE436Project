@@ -8,12 +8,12 @@ INSERT INTO User (name) VALUES
 ('David Brown');
 
 -- Insert dummy values into Room table
-INSERT INTO Room (name, floor, number, seats, table_type, has_tv) VALUES 
-('Atrium', 1, 101, 50, 'Rectangular', 1),
-(NULL, 1, 102, 4, 'Circular', 0),
-(NULL, 2, 201, 2, 'Rectangular', 1),
-(NULL, 2, 202, 8, 'Circular', 1),
-(NULL, 3, 301, 4, 'Circular', 0);
+INSERT INTO Room (name, floor, number, seats, table_type, has_monitor, has_whiteboard) VALUES 
+('Atrium', 1, 101, 50, 1, 1, 0),
+(NULL, 1, 102, 4, 0, 0, 1),
+(NULL, 2, 201, 2, 1, 1, 1),
+(NULL, 2, 202, 8, 0, 1, 0),
+(NULL, 3, 301, 4, 0, 0, 0);
 
 -- Insert dummy values into Event table
 -- Assuming each event duration is set in `number_minutes`

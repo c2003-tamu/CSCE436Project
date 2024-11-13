@@ -13,8 +13,9 @@ CREATE TABLE Room (
     floor INT NOT NULL,
     number INT NOT NULL,
     seats INT NOT NULL,
-    table_type VARCHAR(255) NOT NULL,
-    has_tv TINYINT(1) NOT NULL
+    table_type TINYINT(1) NOT NULL,
+    has_monitor TINYINT(1) NOT NULL,
+    has_whiteboard TINYINT(1) NOT NULL
 );
 
 CREATE TABLE Event (
